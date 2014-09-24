@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Stack Trace</title>
+    <script>
+        function sqrt(x) {
+
+            return Math.sqrt(x);
+        }
+
+        function ceiling(x) {
+            if (isNaN(x)) x.m();
+            return Math.ceil(x)
+        }
+
+        function test(arr) {
+            return arr.map(function (elem) {
+                return sqrt(ceiling(elem));
+            }).reduce(function (a, b) { return a + b; });
+        }
+
+
+        try {
+            console.log(test([1,2,3,4,'sadf']));
+        } catch (err) {
+            console.log(err.stack);
+        }
+
+
+    </script>
+</head>
+<body>
+    This is a really good example
+    <samp>itaca</samp>
+</body>
+</html>

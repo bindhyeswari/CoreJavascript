@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var string = 'This algorithm works well in many practical cases, but can exhibit relatively long running times on certain examples, such as searching for a string of 10,000 "a"s followed by a "b" in a string of 10 million "a"s, in which case it exhibits its worst-case O(mn) time';
+        var substring = 'but can exhibit relatively long';
+
+        function naiveSearch (str, substr) {
+            for (var i = 0, len = str.length - substr.length + 1; i < len; i++) {
+                var complete = true;
+                for (var j = 0, m = substr.length; j < m; j++) {
+                    if (str[ i + j - 1 ] !== substr[j]) {
+                        complete = false;
+                        break;
+                    }
+                }
+                if (complete) return i;
+            }
+            return -1;
+        }
+
+        console.log(naiveSearch(string, substring));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

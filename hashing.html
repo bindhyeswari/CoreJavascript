@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Simple Hash</title>
+    <script>
+
+        /* Create a hash based on the OS, and browser signature */
+
+        // console.log(navigator);
+
+        function getIdentifier() {
+
+            var hash = 0;
+            ['buildID', 'language', 'oscpu', 'platform', 'productSub', 'userAgent'].forEach(function (prop) {
+                var val = navigator[prop];
+                for (var i = 0, len = val.length; i < len; i++) {
+                    hash += val.charCodeAt(i);
+                }
+            });
+
+            return hash;
+
+        }
+
+        console.log(getIdentifier());
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

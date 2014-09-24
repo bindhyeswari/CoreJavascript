@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // You dont have access to Object.create
+        // Write your own function myObjectCreate(parent) and returns a child object
+        // which treats the parent as the prototype
+
+
+        var parent = {
+            id: 32
+        };
+
+        function myObjectCreate(p) {
+
+            function Obj() {
+
+            }
+
+            Obj.prototype = p; // This does not modify the function's ptototype attribute
+
+            return new Obj();
+        }
+
+        var child = myObjectCreate(parent);
+
+        parent.id = 64;
+        console.log(child.id);
+
+    </script>
+</head>
+<body>
+
+   <dl>
+
+       <dt>Ray Hengst</dt>
+       <dd>
+           UI Trainee
+       </dd>
+       <dd>
+           asdfasdf  asdfa fsad asdf as fas dfasd f
+       </dd>
+
+
+   </dl>
+
+</body>
+</html>

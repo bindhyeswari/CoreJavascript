@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var str = 'aa aaa a ray hamid jyotika';
+        // match all a characters. If there are more than 1 consecutive a characters, match them as a set
+        // aa, aaa, a, a, a, a
+
+        var re = /[a]+/gmi; // regular expression literal
+        var rec = new RegExp('[a]+', 'gmi');
+
+        var op = str.match(rec); // returns an array
+        console.log(op);
+
+        var op_test = re.test('ray'); // returns a boolean
+        console.log(op_test);
+
+        // http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149
+    </script>
+</head>
+<body>
+
+</body>
+</html>
